@@ -1,0 +1,215 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* настройка шрифтов */
+
+@font-face{
+    font-family: monoton_r;
+    src: url(/mnogoznaalsite/fonts/Monoton-Regular.ttf);
+}
+
+@font-face{
+    font-family: comporant_r;
+    src: url(/mnogoznaalsite/fonts/CormorantSC-Bold.ttf);
+}
+
+/* настройка стилей body */
+
+body{
+    background-color: #f1eef3;
+    color:white;
+    font-family: comporant_r, sans-serif;
+    line-height: 1.25;
+}
+
+hr.style_hr {
+    margin: 3%;
+    overflow: visible; /* For IE */
+    height: 30px;
+    border-style: solid;
+    border-color: rgb(69, 59, 59);
+    border-width: 2px 0 0 0;
+    border-radius: 70px;
+}
+hr.style_hr:before {
+    display: block;
+    content: "";
+    height: 30px;
+    margin-top: -31px;
+    border-style: solid;
+    border-color: rgb(69, 59, 59);
+    border-width: 0 0 1px 0;
+    border-radius: 70px;
+}
+a{
+    text-decoration: none;
+}
+/* верхняя шторка */
+.upper-menu{
+    min-height: 4vw;
+    position:static;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0 0 3vh 3vh;
+    box-shadow: 0px 0px 15px 5px #848484;
+}
+.button{
+    background-color: transparent;
+    border: transparent;
+    border-radius: 15px;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    margin: 0 10vw 0 10vw;
+}
+button:hover{
+    transform:scale(1.2);
+    transition: all 0.3s ease-out;
+
+}
+.logo{
+    max-width: 7vw;
+    max-height: 7vh;
+    position: relative;
+}
+/* интро */
+.main-header{
+    margin: 3%;
+    margin-bottom: 3vh;
+    border-radius: 10%;
+}
+.layers{
+    /* на всю площадь экрана */
+    min-height: 100vmax;
+    border-radius: 70px;
+    /*box-shadow: 0px 0px 15px 5px #848484; */
+    /* позиционка */
+    display: flex;
+    /* по у */
+    align-items: center;
+    /* по х */
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+.layers_header{
+    transform: translate(0, calc( var(--scrollTop) / 2.35));
+    font-family: monoton_r, sans-serif;
+    line-height: 1.25;
+    font-size: 5vh;
+    font-size: 5vw;
+    position: absolute;
+    z-index: 2;
+}
+.layers_upper_title,.layers_caption,.layers_title{
+    position:relative;
+    z-index: 2;
+}
+.layer{
+    min-height: 100vmax;
+    width: 100%;
+    position:absolute;
+    background-size:cover;
+    background-position:center;
+    will-change: transform;
+}
+.layers_back{
+    border-radius: 70px;
+    /* box-shadow: 0px 0px 15px 5px #848484; */
+    transform: translate(0, calc( var(--scrollTop) / 1.5 ));
+    z-index: 0;
+}
+.layers_middle{
+    transform: translate(0, calc( var(--scrollTop) / 3));
+    z-index: 1;
+}
+.layers_front{
+    transform: translate(0, calc( var(--scrollTop) / 10));
+    z-index: 2;
+}
+
+/*вcтупление*/
+.main-article{
+    margin: 3%;
+    margin-bottom: 5vmax;
+    position: relative;
+    background-size:cover;
+    background-position: center;
+    border-radius: 3vh;
+    color: #bdafca;
+    box-shadow: 0px 0px 15px 5px #848484;
+}
+p{
+    padding: 4%;
+    font-size:3vmin;
+    color: rgb(63, 60, 60);
+    width: 100%;
+    /* позиционка */
+    display: flex;
+    /* по у */
+    align-items: center;
+    /* по х */
+    justify-content: center;
+    text-align: center;
+}
+.DugaLogo img{
+    justify-content: right;
+    position: absolute;
+    max-width: 70%;
+    max-height: 70%;
+    top: 70%;
+    right: -50px;
+}
+.DugaLogo img:hover{
+    transform:scale(1.2);
+    transition: all 0.3s ease-out;
+}
+
+/* альбомы */
+.creations{
+    position: relative;
+    font-family: monoton_r, sans-serif;
+    padding: 4%;
+    font-size:8vmin;
+    color: rgb(63, 60, 60);
+    text-align: left;
+}
+.swiper{
+    margin: 3%;
+    margin-bottom: 3vh;
+    border: radius 10%;
+    font-family: comporant_r, sans-serif;
+}
+.swiper-slide{
+    text-align: center;
+    background-color: none;
+    display: flex;
+    text-align: center;
+    justify-content: left;
+    align-items: center;
+}
+.swiper-slide img{
+    max-height: 20%;
+    max-width: 20%;
+    object-fit:cover;
+    border-radius: 10%;
+}
+.swiper-slide p{
+
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size:6vmin;
+}
+/* .swiper-button-next, .swiper-rtl .swiper-button-prev{
+    right: 10vw !important; 
+    left: auto;
+}
+.swiper-button-prev, .swiper-rtl .swiper-button-next{
+    left: 10vw !important; 
+    right: auto;
+} */
